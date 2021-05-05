@@ -61,7 +61,6 @@ namespace Prccss
             int x = 0;
             if (!int.TryParse(wrdmn[2], out x))
             {
-                Console.WriteLine("Fake");
                 File.Delete(drcttxt);
                 Escribir = new StreamWriter(drcttxt, true);
                 Escribir.Write("Admin, Contra, 3");

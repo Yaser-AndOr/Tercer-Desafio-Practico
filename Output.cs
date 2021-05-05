@@ -54,7 +54,7 @@ namespace Out
                     strache += outputg;
                     Console.Write(outputg);
                 }
-                Escribir.Write("\n ");
+                Escribir.Write("\n");
                 strache += "\n";
                 Console.Write("\n");
                 Console.WriteLine("Presione cualquier tecla para continuar");
