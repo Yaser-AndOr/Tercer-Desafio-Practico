@@ -1,0 +1,15 @@
+Cómo usar el programa:
+1- Ejecuta el archivo llamado "Tercer_Desafío_Práctico.exe", este creará los directorios que el programa 
+   utiliza.
+2- Llena los datos de usuario y contraseña, estos son , por default, "Admin" y "Contra", respectivamente
+2.1- Si el programa se bloquea vaya a la carpeta "admindata" y abra el documento "datadmin.dll" con el 
+   editor de texto, aquí se encontrará con dos palabras y un número separados por comas "," unos de otros,
+   las primera palabra corresponde al nombre de usuario, la segunda palabra correspode a la contraseña y 
+   el número corresponde al número de intentos restantes para ingresar una contraseña; desde este archivo
+   puede modificar el nombre de usuario o contraseña, pero no borre las comas, o agregue de más, así como
+   no debe ingresar un valor no numérico en el contador de intentos restantes, en estos casos el sistema 
+   seteará los datos default y sus cambios en nombre de usuario y contraseña se perderán; en caso ingrese
+   un valor mayor que 3 en los intentos restantes, el sistema seteará estos mismos en 3 de nuevo.
+3- Los datos guardados estarán en la carpeta "calculoEmple", ordenados y nombrados por fecha y hora, así 
+   como el historial que almacena datos zip de los datos almacenados en "calculoEmple", este estará en la 
+   carpeta "hist".
