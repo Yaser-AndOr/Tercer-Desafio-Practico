@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Nums
 {
@@ -49,7 +50,7 @@ namespace Nums
                     {
                         bono = sb * 0.05;
                     }
-                    else if (Data[x, 1] == "Asistente")
+                    else if (Data[x, 1] == "Secretaria")
                     {
                         bono = sb * 0.03;
                     }
@@ -60,6 +61,33 @@ namespace Nums
                 }
             }
             return bono;
+        }
+
+        public String[] Mymn300 (Double[,] sueldos, String[,] nombres)
+        {
+            String[] resulmymn = new String[3];
+            Double[] sl = new Double[3];
+            Double mayorque = 0;
+            for (int a = 0; a < 3; a++)
+                sl[a] = sueldos[a, 5];
+
+            for (int x = 0; x < 3; x++)
+            {
+                if (sl[x] > 300)
+                {
+                    mayorque++;
+                }
+                if (sl[x] == sl.Min())
+                {
+                    resulmymn[0] += $"{nombres[x, 0]} ";
+                }
+                if (sl[x] == sl.Max())
+                {
+                    resulmymn[1] += $"{nombres[x, 0]} ";
+                }
+            }
+            resulmymn[2] = mayorque.ToString();
+            return resulmymn;
         }
     }
 }

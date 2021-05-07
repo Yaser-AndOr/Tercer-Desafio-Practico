@@ -7,7 +7,7 @@ namespace Out
     class Output
     {
         static StreamWriter Escribir;
-        public void Escriturafinal(String[,] datos, Double[,] salarios)
+        public void Escriturafinal(String[,] datos, Double[,] salarios, String[] maymen)
         {
             String[] complementos = { "Nombre del empleado: ", "Cargo del empleado: ", "Código del empleado: ",
                 "Horas trabajadas: ", "ISSS: $", "AFP: $", "RENTA: $", "Sueldo L: $", "Sueldo N: $", "Bonos: $"};
@@ -32,6 +32,7 @@ namespace Out
             String drcttxt = Path.GetFullPath($@"calculoEmple\{localdate}.txt");
             String cachetxt = Path.Combine($@"c:\{localdate}\{localdate}.txt"), strache = "", outputg = "";
             Escribir = new StreamWriter(drcttxt, true);
+
             for (int x = 0, y = 0; x < 3; x++)
             {
                 for (y = 0; y < 10; y++)
@@ -61,7 +62,11 @@ namespace Out
                 Console.ReadKey();
                 Console.Clear();
             }
+            Escribir.Write($"{maymen[0]} Gana menos\n{maymen[1]} Gana más\n{maymen[2]} Gana(n) más de $300\n");
+            strache += $"{maymen[0]} Gana menos\n{maymen[1]} Gana más\n{maymen[2]} Gana(n) más de $300\n";
+            Console.Write($"{maymen[0]} Gana menos\n{maymen[1]} Gana más\n{maymen[2]} Gana(n) más de $300\n)";
             Escribir.Close();
+
             Directory.CreateDirectory($@"c:\{localdate}");
             Escribir = new StreamWriter(cachetxt, true);
             Escribir.Write(strache);

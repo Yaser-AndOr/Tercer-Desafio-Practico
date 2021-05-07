@@ -32,7 +32,8 @@ namespace Main
             {
                 String[,] datosempl = Empleados.Wordemploy();
                 Double[,] salarios = Sueldos.Calculos(datosempl);
-                Salida.Escriturafinal(datosempl, salarios);
+                String[] mayormenor = Sueldos.Mymn300(salarios, datosempl);
+                Salida.Escriturafinal(datosempl, salarios, mayormenor);
             }
             Console.WriteLine("Gracias por utilizar nuestros servicios, presione cualquier tecla para salir.");
             Console.ReadKey();
